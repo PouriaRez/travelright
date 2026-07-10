@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
-import { AR_One_Sans } from 'next/font/google';
+import { AR_One_Sans, Geist } from 'next/font/google';
 import './globals.css';
+import { cn } from '@/lib/utils';
+
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const ArSans = AR_One_Sans({
   subsets: ['latin'],
@@ -17,7 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${ArSans.className} h-full antialiased`}>
+    <html
+      lang="en"
+      className={cn(
+        'h-full',
+        'antialiased',
+        ArSans.className,
+        'font-sans',
+        geist.variable,
+      )}
+    >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
