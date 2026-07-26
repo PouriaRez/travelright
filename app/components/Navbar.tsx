@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Join from './Join';
 
 const Navbar = () => {
   return (
@@ -19,6 +20,7 @@ const Navbar = () => {
         <div className=" hover:scale-110 transition-all duration-300">
           Mission
         </div>
+        <Join />
       </div>
     </div>
   );
