@@ -12,7 +12,7 @@ const Hero = () => {
         <h1 className="text-6xl font-bold text-zinc-200">
           It all starts here and now
         </h1>
-        <Link href="/informationGather">
+        <Link href="/gather/information">
           <Button
             size="lg"
             variant="outline"
